@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class AfishaTest {
+
     @Test
 
     public void test() {
@@ -18,7 +19,10 @@ public class AfishaTest {
 
         String[] expected = {"Film 1", "Film 2", "Film 3", "Film 4", "Film 5", "Film 6", "Film 7"};
         String[] actual = afisha.findAll();
+        Assertions.assertArrayEquals(expected, actual);
     }
+
+
 
     @Test
 
@@ -35,6 +39,7 @@ public class AfishaTest {
 
         String[] expected = {"Film 1", "Film 2", "Film 4", "Film 5", "Film 6", "Film 7"};
         String[] actual = afisha.findAll();
+        Assertions.assertArrayEquals(expected, actual);
     }
     @Test
 
@@ -44,8 +49,19 @@ public class AfishaTest {
 
         String[] expected = {"Film 1"};
         String[] actual = afisha.findAll();
+        Assertions.assertArrayEquals(expected, actual);
     }
 
+    @Test
+
+    public void test3() {
+        Afisha afisha = new Afisha();
+
+
+        String[] expected = {};
+        String[] actual = afisha.findAll();
+        Assertions.assertArrayEquals(expected, actual);
+    }
 
 
     @Test
@@ -57,6 +73,17 @@ public class AfishaTest {
 
         String[] expected = {"Film 8"};
         String[] actual = afisha.findLast();
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+
+    public void FindLast10() {
+        Afisha afisha = new Afisha();
+
+        String[] expected = {};
+        String[] actual = afisha.findLast();
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -72,8 +99,36 @@ public class AfishaTest {
         afisha.addFilm("Film 7");
 
 
-        String[] expected = {"Film 1", "Film 2", "Film 3", "Film 4", "Film 5", "Film 6", "Film 7"};
+        String[] expected = {"Film 7", "Film 6", "Film 5", "Film 4", "Film 3", "Film 2", "Film 1"};
         String[] actual = afisha.findLast();
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+
+    public void testLast12() {
+        Afisha afisha = new Afisha(4);
+        afisha.addFilm("Film 4");
+        afisha.addFilm("Film 3");
+        afisha.addFilm("Film 2");
+        afisha.addFilm("Film 1");
+
+
+
+
+        String[] expected = {"Film 1", "Film 2", "Film 3", "Film 4"};
+        String[] actual = afisha.findLast();
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testLastNull() {
+        Afisha afisha = new Afisha();
+
+
+        String[] expected = {};
+        String[] actual = afisha.findLast();
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -86,6 +141,7 @@ public class AfishaTest {
 
         String[] expected = {"Film 7"};
         String[] actual = afisha.findLast();
+        Assertions.assertArrayEquals(expected, actual);
     }
 }
 
