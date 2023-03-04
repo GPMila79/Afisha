@@ -164,6 +164,28 @@ public class AfishaTest {
         String[] actual = afisha.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+    @Test
+
+    public void testLast20() {
+        Afisha afisha = new Afisha(20);
+        afisha.addFilm("Film 13");
+        afisha.addFilm("Film 12");
+        afisha.addFilm("Film 11");
+        afisha.addFilm("Film 10");
+        afisha.addFilm("Film 9");
+        afisha.addFilm("Film 8");
+        afisha.addFilm("Film 7");
+        afisha.addFilm("Film 6");
+        afisha.addFilm("Film 5");
+        afisha.addFilm("Film 4");
+        afisha.addFilm("Film 3");
+        afisha.addFilm("Film 2");
+        afisha.addFilm("Film 1");
+
+        String[] expected = {"Film 1", "Film 2", "Film 3", "Film 4", "Film 5", "Film 6", "Film 7", "Film 8", "Film 9", "Film 10", "Film 11", "Film 12", "Film 13"};
+        String[] actual = afisha.findLast();
+        Assertions.assertArrayEquals(expected, actual);
+    }
 
     @Test
 
