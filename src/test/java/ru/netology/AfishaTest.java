@@ -122,6 +122,29 @@ public class AfishaTest {
 
     @Test
 
+    public void testLast17() {
+        Afisha afisha = new Afisha(0);
+
+        String[] expected = {};
+        String[] actual = afisha.findLast();
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+
+    public void testLast18() {
+        Afisha afisha = new Afisha(1);
+        afisha.addFilm("Film 1");
+
+
+        String[] expected = {"Film 1"};
+        String[] actual = afisha.findLast();
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+
+    @Test
+
     public void testLast13() {
         Afisha afisha = new Afisha(12);
         afisha.addFilm("Film 12");
