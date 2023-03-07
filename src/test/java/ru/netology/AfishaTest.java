@@ -166,7 +166,7 @@ public class AfishaTest {
     }
     @Test
 
-    public void testLast20() {
+    public void testLastLimitMoreFilms() {
         Afisha afisha = new Afisha(20);
         afisha.addFilm("Film 13");
         afisha.addFilm("Film 12");
