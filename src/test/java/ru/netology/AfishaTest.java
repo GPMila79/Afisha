@@ -167,7 +167,7 @@ public class AfishaTest {
     @Test
 
     public void testLastLimitMoreFilms() {
-        Afisha afisha = new Afisha(20);
+        Afisha afisha = new Afisha(11);
         afisha.addFilm("Film 13");
         afisha.addFilm("Film 12");
         afisha.addFilm("Film 11");
@@ -182,7 +182,7 @@ public class AfishaTest {
         afisha.addFilm("Film 2");
         afisha.addFilm("Film 1");
 
-        String[] expected = {"Film 1", "Film 2", "Film 3", "Film 4", "Film 5", "Film 6", "Film 7", "Film 8", "Film 9", "Film 10", "Film 11", "Film 12", "Film 13"};
+        String[] expected = {"Film 1", "Film 2", "Film 3", "Film 4", "Film 5", "Film 6", "Film 7", "Film 8", "Film 9", "Film 10", "Film 11"};
         String[] actual = afisha.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
